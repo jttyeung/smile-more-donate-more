@@ -8,6 +8,9 @@
  * @param {function(string)} callback - called when the URL of the current tab
  *   is found.
  */
+
+
+
 function getCurrentTabUrl(callback) {
   // Query filter to be passed to chrome.tabs.query - see
   // https://developer.chrome.com/extensions/tabs#method-query
@@ -16,7 +19,7 @@ function getCurrentTabUrl(callback) {
     currentWindow: true
   };
 
-  chrome.tabs.query(queryInfo, function(tabs) {
+  chrome.tabs.query({'active': true}, function(tabs) {
     // chrome.tabs.query invokes the callback with a list of tabs that match the
     // query. When the popup is opened, there is certainly a window and at least
     // one tab, so we can safely assume that |tabs| is a non-empty array.
@@ -26,7 +29,24 @@ function getCurrentTabUrl(callback) {
 
     // A tab is a plain object that provides information about the tab.
     // See https://developer.chrome.com/extensions/tabs#type-Tab
+
+    var regexAmazon = new RegExp(/(www\.amazon\.com)/);
+
+    // Current tab's URL
     var url = tab.url;
+
+
+    if(url.match(regexAmazon)) {
+
+      // Get product URL string that follows www.amazon.com
+      var parseAmazonUrl = url.split(regexAmazon);
+      var amazonProduct = parseAmazonUrl[parseAmazonUrl.length-1];
+
+      // If product string exists, redirect current tab URL to smile.amazon.com
+      if(amazonProduct !== regexAmazon) {
+        chrome.tabs.update(tab.id, {url: 'https://smile.amazon.com' + amazonProduct});
+      }
+    }
 
     // tab.url is only available if the "activeTab" permission is declared.
     // If you want to see the URL of other tabs (e.g. after removing active:true
