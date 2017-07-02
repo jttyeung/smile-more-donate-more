@@ -18,15 +18,20 @@ function smileUrlConstructor(url){
   var parseAmazonUrl = url.split(regexAmazon);
   var amazonProduct = parseAmazonUrl[parseAmazonUrl.length-1];
 
-  if(amazonProduct !== regexAmazon) {
-    return {
-      redirectUrl: amazonSmile + amazonProduct
-    };
-  } else {
-    return {
-      redirectUrl: amazonSmile
+  if(url.includes('www.amazon.com')) {
+
+    if(amazonProduct !== regexAmazon) {
+      return {
+        redirectUrl: amazonSmile + amazonProduct
+      };
+    } else {
+      return {
+        redirectUrl: amazonSmile
+      }
     }
+
   }
+
 }
 
 
