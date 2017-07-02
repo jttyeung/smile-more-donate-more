@@ -3,18 +3,18 @@
 
   "name": "Smile More, Donate More",
 
-  "description": "Redirects Amazon.com requests to smile.amazon.com. Purchase through AmazonSmile to donate to your favorite charity.",
+  "description": "Redirects Amazon.com requests to smile.amazon.com. Purchase goods through AmazonSmile to donate to your favorite charity.",
 
   "version": "1.0",
 
   "browser_action": {
-    "default_icon": "smilemore16.png",
+    "default_icon": "icons/smilemore16.png",
     "default_popup": "info.html"
   },
 
-  "icons": { "16": "smilemore16.png",
-           "48": "smilemore48.png",
-          "128": "smilemore128.png" },
+  "icons": { "16": "icons/smilemore16.png",
+           "48": "icons/smilemore48.png",
+          "128": "icons/smilemore128.png" },
 
   "background": {
     "persistent": true,
