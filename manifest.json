@@ -3,6 +3,8 @@
 
   "name": "Smile More, Donate More",
 
+  "short_name": "Smile More",
+
   "description": "Redirects Amazon.com requests to smile.amazon.com. Purchase goods through AmazonSmile to donate to your favorite charity.",
 
   "version": "1.0",
