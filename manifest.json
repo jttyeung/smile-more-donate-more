@@ -22,8 +22,7 @@
     "webRequest",
     "*://www.amazon.com/*",
     "*://amazon.com/*",
-    "webRequestBlocking",
-    "webNavigation"
+    "webRequestBlocking"
   ],
 
   "author": "Joanne Yeung"
