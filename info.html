@@ -9,33 +9,8 @@
 
   <head>
     <title>Smile More, Donate More :)</title>
-    <style>
-      body {
-        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
-        font-size: 1em;
-      }
-
-      div.info {
-        word-wrap: break-word;
-        width: 300px;
-        height: 400px;
-      }
-
-      div#id {
-        width: 100px;
-        height: 100px;
-        z-index: 1;
-        background: rgba(0, 0, 0, 0.8);
-      }
-
-      p {
-        font-size: 0.85em;
-      }
-
-      p#footer {
-        font-size: 0.7em;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
   </head>
 
 
@@ -48,10 +23,14 @@
         Donate More :)</h1>
       </div>
 
-      <p>This lightweight extension redirects you to the smile.amazon.com mirror page every time you visit Amazon. Amazon Smile is Amazon's charity program to non-profit organizations. For every purchase through smile.amazon.com, Amazon donates 0.05% of the price of eligible items to the charity organization of your choice. Learn more at: <a href="https://smile.amazon.com/gp/chpf/pd/ref=smi_se_saas_lpd_spd">https://smile.amazon.com/gp/chpf/pd/ref=smi_se_saas_lpd_spd</a>
-      </p>
+      <div id="content">
+        <p id="impact"><a href="https://smile.amazon.com/gp/chpf/dashboard/ref=smi_se_rspo_lyi_dshb" target="_blank">See Your AmazonSmile Impact</a><br></p>
 
-      <p id="footer">This Chrome extension not affiliated with, maintained, authorized, endorsed or sponsored by Amazon.com. Get the <a href="https://github.com/jttyeung">source code</a> for this project, learn more <a href="jttyeung.github.io/blog/">about the extension</a>, or find out more about the <a href="https://www.linkedin.com/in/jttyeung">developer</a>.</p>
+        <p id="info">This lightweight extension redirects you to the smile.amazon.com mirror page every time you visit Amazon. Amazon Smile is Amazon's charity program for non-profit organizations. For every purchase through smile.amazon.com, Amazon donates 0.05% of the price of eligible items to the charity organization of your choice.
+        <br>Learn more at: <a href="https://smile.amazon.com/gp/chpf/pd/ref=smi_se_saas_lpd_spd" target="_blank">AmazonSmile</a></p>
+
+        <p id="footer">This Chrome extension is not affiliated with, maintained, authorized, endorsed or sponsored by Amazon.com. Get the <a href="https://github.com/jttyeung" target="_blank">open source code</a> for this project, learn more <a href="jttyeung.github.io/blog/" target="_blank">about the extension</a>, or find out more <a href="https://www.linkedin.com/in/jttyeung" target="_blank">about the developer</a>.</p>
+      </div>
 
     </div>
 
