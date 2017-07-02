@@ -3,7 +3,7 @@
 
   "name": "Smile More, Donate More",
 
-  "description": "This lightweight extension redirects you to the smile.amazon.com mirror page every time you visit an Amazon. Amazon Smile is Amazon's charity program to non-profit organizations. Every time you purchase something through smile.amazon.com, Amazon donates 0.05% of its revenue to the organization of your choice. Learn more at: https://smile.amazon.com/gp/chpf/pd/ref=smi_se_saas_lpd_spd",
+  "description": "This lightweight extension redirects you to the smile.amazon.com mirror page every time you visit Amazon. Amazon Smile is Amazon's charity program to non-profit organizations. For every purchase through smile.amazon.com, Amazon donates 0.05% of the price of eligible items to the charity organization of your choice. Learn more at: https://smile.amazon.com/gp/chpf/pd/ref=smi_se_saas_lpd_spd",
 
   "version": "0.1",
 
@@ -18,7 +18,6 @@
   },
 
   "permissions": [
-    "activeTab",
     "webRequest",
     "*://www.amazon.com/*",
     "*://amazon.com/*",
