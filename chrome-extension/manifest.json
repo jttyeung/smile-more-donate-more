@@ -5,9 +5,9 @@
 
   "short_name": "Smile More",
 
-  "description": "Redirects Amazon.com requests to smile.amazon.com. Purchase goods through AmazonSmile to donate to your favorite charity.",
+  "description": "Redirects Amazon.com requests to smile.amazon.com. The Amazon Smile Foundation (owned by Amazon) donates to your favorite charity every time you shop through AmazonSmile.",
 
-  "version": "1.0.1",
+  "version": "1.0.2",
 
   "browser_action": {
     "default_icon": "icons/smilemore16.png",

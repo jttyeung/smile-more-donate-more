@@ -14,7 +14,7 @@ The app is available and [free for download through Chrome's Web Store][download
 ![Smile More, Donate More :) Screencast](smilemore-screencast.gif)
 
 
-## Version 1.0.1
+## Version 1.0.2
 
 This version contains the following features:
 - Amazon.com HTTP redirects to smile.amazon.com
