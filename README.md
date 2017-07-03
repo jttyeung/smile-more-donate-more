@@ -8,10 +8,10 @@ Smile More, Donate More :)
 
 ## How to Use **Smile More, Donate More :)**
 
-The app is available and [free for download through Chrome's Web Store][download]. Simply add the extension to Chrome, and it'll take care of all redirects in any future browsing. A screenshot of what it looks like in the Chrome browser is below:
+The app is available and [free for download through Chrome's Web Store][download]. Simply add the extension to Chrome, and it'll take care of all redirects in any future browsing. Here's a screencast of what it looks like in action on the Chrome browser:
 
 
-![Smile More, Donate More :) Screenshot](amazon-smile-1200x800.png)
+![Smile More, Donate More :) Screencast](smilemore-screencast.gif)
 
 
 ## Version 1.0.1
