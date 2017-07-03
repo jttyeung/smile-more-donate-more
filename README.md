@@ -1,12 +1,17 @@
+![Smile More, Donate More :) Banner](smilemore-1400x560.png)
+
 Smile More, Donate More :)
 ======
 
-**Smile More, Donate More :)** is a lightweight Chrome extension built in JavaScript, HTML, and CSS. While browsing on Chrome, the extension captures any Amazon.com URL requests entered by the user and sends the browser to AmazonSmile (https://smile.amazon.com) instead. AmazonSmile is Amazon's charity program for non-profit organizations. For every purchase through AmazonSmile, Amazon donates 0.5% of the price of eligible items to the user's charity organization of choice. Learn more about the [creation of this project here][project].
+**Smile More, Donate More :)** is a lightweight Chrome extension built in JavaScript, HTML, and CSS. While browsing on Chrome, the extension captures any Amazon.com URL requests browsed to by the user and sends the browser to AmazonSmile (https://smile.amazon.com) instead. AmazonSmile is Amazon's charity program for non-profit organizations. For every purchase through AmazonSmile, Amazon donates 0.5% of the price of eligible items to the user's charity organization of choice. Learn more about the [creation of this project here][project].
 
 
 ## How to Use **Smile More, Donate More :)**
 
-The app is available and [free for download through Chrome's Web Store][download]. Just add the extension to Chrome, and it'll take care of all the redirects in any future browsing.
+The app is available and [free for download through Chrome's Web Store][download]. Simply add the extension to Chrome, and it'll take care of all redirects in any future browsing. A screenshot of what it looks like in the Chrome browser is below:
+
+
+![Smile More, Donate More :) Screenshot](amazon-smile-1200x800.png)
 
 
 ## Version 1.0.1
@@ -35,4 +40,4 @@ This project is licensed under the [MIT License][license].
 [project]: https://jttyeung.github.io/2017/07/02/smile-more-donate-more.html
 [download]: https://chrome.google.com/webstore/detail/smile-more-donate-more/lbicnnogjkpfkhokabdopjibhlcejhop
 [linkedin]: https://linkedin.com/in/jttyeung
-[license]: https://github.com/jttyeung/smile-more-donate-more/blob/master/LICENSE
+[license]: LICENSE
