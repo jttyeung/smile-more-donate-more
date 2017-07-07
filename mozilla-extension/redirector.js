@@ -5,16 +5,14 @@ browser.webRequest.onBeforeRequest.addListener(
   function(details) {
     var url = details.url;
 
-  // Amazon URL pattern finder
-  var regexAmazon = new RegExp(/(www\.amazon\.com)/);
     // Filters for www.amazon.com requests only
-    // if(url.includes('www.amazon.com')) {
+    if(url.includes('www.amazon.com')) {
       return smileUrlConstructor(url);
-    // }
+    }
   },
   {
-    // Listens on www.amazon.com requests only
-    urls: ['regexAmazon'],
+    // Listens on all URLs
+    urls: ['<all_urls>'],
     types: ["main_frame","sub_frame"]
   },
   // Blocks initial network request, waits for listener to return

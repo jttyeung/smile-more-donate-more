@@ -45,19 +45,19 @@
     left: 0px;
     top: 130px;
     padding: 5px;
-    font-size: 1.6em;
+    font-size: 1.2em;
     text-align: center;
   }
 
   p#info {
-    font-size: 1.15em;
-    top: 176px;
+    font-size: 0.85em;
+    top: 180px;
   }
 
   p#footer {
-    top: 336px;
-    height: 68px;
-    font-size: 1em;
+    top: 348px;
+    height: 57px;
+    font-size: 0.7em;
     background: rgba(255, 153, 0, 0.1);
   }
 
