@@ -1,20 +1,23 @@
 // Listens to outbound requests on Chrome
 // before a TCP connection has been established
-chrome.webRequest.onBeforeRequest.addListener(
+browser.webRequest.onBeforeRequest.addListener(
 
   function(details) {
     var url = details.url;
 
+  // Amazon URL pattern finder
+  var regexAmazon = new RegExp(/(www\.amazon\.com)/);
     // Filters for www.amazon.com requests only
-    if(url.includes('www.amazon.com')) {
+    // if(url.includes('www.amazon.com')) {
       return smileUrlConstructor(url);
-    }
+    // }
   },
   {
-    // Listens while on all URLs
-    urls: ['<all_urls>'],
+    // Listens on www.amazon.com requests only
+    urls: ['regexAmazon'],
     types: ["main_frame","sub_frame"]
   },
+  // Blocks initial network request, waits for listener to return
   ['blocking']
 
 );
