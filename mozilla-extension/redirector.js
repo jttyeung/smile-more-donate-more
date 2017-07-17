@@ -1,4 +1,4 @@
-// Listens to outbound requests on Chrome
+// Listens to outbound requests on browser
 // before a TCP connection has been established
 browser.webRequest.onBeforeRequest.addListener(
 

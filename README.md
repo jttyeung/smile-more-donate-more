@@ -15,10 +15,11 @@ This app is currently compatible with the following browsers:
 
 ## How to Use **Smile More, Donate More :)**
 
-Simply add the extension to your browser of choice using one of the below download links, and it'll take care of all redirects for any future browsing.
+Simply add the extension to your browser of choice using one of the below free download links, and it'll take care of all redirects for any future browsing.
 
-[Free for download through Chrome's Web Store][chrome-download].
-[Free for download through Mozilla's Add-Ons Page][mozilla-download].
+- Get the extension on [Chrome's Web Store][chrome-download]
+- Get the extension on [Mozilla's Add-Ons Page][mozilla-download]
+
 
 Here's a screencast of what it looks like in action on the Chrome browser:
 
@@ -50,6 +51,6 @@ This project is licensed under the [MIT License][license].
 
 [project]: https://jttyeung.github.io/2017/07/02/smile-more-donate-more.html
 [chrome-download]: https://chrome.google.com/webstore/detail/smile-more-donate-more/lbicnnogjkpfkhokabdopjibhlcejhop
-[mozilla-download]: 
+[mozilla-download]: https://addons.mozilla.org/en-US/firefox/addon/smile-more-donate-more/
 [linkedin]: https://linkedin.com/in/jttyeung
 [license]: LICENSE
