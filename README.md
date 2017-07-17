@@ -11,14 +11,17 @@ Smile More, Donate More :)
 This app is currently compatible with the following browsers:
 - Chrome
 - Firefox
+- Opera
 
 
 ## How to Use **Smile More, Donate More :)**
 
 Simply add the extension to your browser of choice using one of the below free download links, and it'll take care of all redirects for any future browsing.
 
-- Get the extension on [Chrome's Web Store][chrome-download]
-- Get the extension on [Mozilla's Add-Ons Page][mozilla-download]
+Get the extension for:
+- Chrome on [Chrome's Web Store][chrome-download]
+- Firefox on [Mozilla's Add-Ons Catalog][mozilla-download]
+- Opera on [Opera's Extensions Catalog][opera-download]
 
 
 Here's a screencast of what it looks like in action on the Chrome browser:
@@ -52,5 +55,6 @@ This project is licensed under the [MIT License][license].
 [project]: https://jttyeung.github.io/2017/07/02/smile-more-donate-more.html
 [chrome-download]: https://chrome.google.com/webstore/detail/smile-more-donate-more/lbicnnogjkpfkhokabdopjibhlcejhop
 [mozilla-download]: https://addons.mozilla.org/en-US/firefox/addon/smile-more-donate-more/
+[opera-download]: 
 [linkedin]: https://linkedin.com/in/jttyeung
 [license]: LICENSE
