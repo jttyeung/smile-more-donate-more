@@ -1,9 +1,20 @@
-// Listens to outbound requests on Chrome
+// Listens to outbound requests on browser
 // before a TCP connection has been established
 chrome.webRequest.onBeforeRequest.addListener(
 
   function(details) {
     var url = details.url;
+
+    // Amazon URLs to ignore when redirecting
+    var filters = [ '(redirect=true)',
+                    '(redirector.html)',
+                    '(ap)' ];
+
+    // Fixes too many redirects bug when
+    // user is not logged to Amazon
+    if(url.match(filters.join('|'))) {
+      return;
+    }
 
     // Filters for www.amazon.com requests only
     if(url.includes('www.amazon.com')) {
