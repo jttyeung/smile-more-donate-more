@@ -3,18 +3,29 @@
 Smile More, Donate More :)
 ======
 
-**Smile More, Donate More :)** is a lightweight Chrome extension built in JavaScript, HTML, and CSS. While browsing on Chrome, the extension captures any Amazon.com URL requests browsed to by the user and sends the browser to AmazonSmile (https://smile.amazon.com) instead. AmazonSmile is Amazon's charity program for non-profit organizations. For every purchase through AmazonSmile, Amazon donates 0.5% of the price of eligible items to the user's charity organization of choice. Learn more about the [creation of this project here][project].
+**Smile More, Donate More :)** is a lightweight browser extension built in JavaScript, HTML, and CSS. The extension captures any Amazon.com URL requests browsed to by the user and instead sends the browser to the AmazonSmile (https://smile.amazon.com) mirror page. AmazonSmile is Amazon's charity program for non-profit organizations. For every purchase through AmazonSmile, Amazon donates 0.5% of the price of eligible items to the user's charity organization of choice. Learn more about the [creation of this project here][project].
+
+
+## Compatibility
+
+This app is currently compatible with the following browsers:
+- Chrome
+- Firefox
 
 
 ## How to Use **Smile More, Donate More :)**
 
-The app is available and [free for download through Chrome's Web Store][download]. Simply add the extension to Chrome, and it'll take care of all redirects in any future browsing. Here's a screencast of what it looks like in action on the Chrome browser:
+Simply add the extension to your browser of choice using one of the below download links, and it'll take care of all redirects for any future browsing.
 
+[Free for download through Chrome's Web Store][chrome-download].
+[Free for download through Mozilla's Add-Ons Page][mozilla-download].
+
+Here's a screencast of what it looks like in action on the Chrome browser:
 
 ![Smile More, Donate More :) Screencast](smilemore-screencast.gif)
 
 
-## Version 1.0.2
+## Current Version
 
 This version contains the following features:
 - Amazon.com HTTP redirects to smile.amazon.com
@@ -38,6 +49,7 @@ This project is licensed under the [MIT License][license].
 
 
 [project]: https://jttyeung.github.io/2017/07/02/smile-more-donate-more.html
-[download]: https://chrome.google.com/webstore/detail/smile-more-donate-more/lbicnnogjkpfkhokabdopjibhlcejhop
+[chrome-download]: https://chrome.google.com/webstore/detail/smile-more-donate-more/lbicnnogjkpfkhokabdopjibhlcejhop
+[mozilla-download]: 
 [linkedin]: https://linkedin.com/in/jttyeung
 [license]: LICENSE
