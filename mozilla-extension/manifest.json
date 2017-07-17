@@ -10,13 +10,12 @@
   "version": "1.1",
 
   "browser_action": {
-    "default_icon": "icons/smilemore16.png",
+    "default_icon": "icons/smilemore32.png",
     "default_popup": "info.html"
   },
 
-  "icons": { "16": "icons/smilemore16.png",
-           "48": "icons/smilemore48.png",
-          "128": "icons/smilemore128.png" },
+  "icons": { "32": "icons/smilemore32.png",
+             "64": "icons/smilemore64.png" },
 
   "background": {
     "scripts": ["redirector.js"]
