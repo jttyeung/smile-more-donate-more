@@ -2,7 +2,7 @@
   "name": "smile-more-donate-more",
   "version": "1.0.0",
   "description": "![Smile More, Donate More :) Banner](smilemore-1400x560.png)",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
