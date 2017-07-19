@@ -1,7 +1,7 @@
 {
-  "name": "Smile More, Donate More :)",
+  "name": "smile-more-donate-more",
   "version": "1.0.0",
-  "description": "An informational site for the Smile More Donate More :) browser extension.",
+  "description": "![Smile More, Donate More :) Banner](smilemore-1400x560.png)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,8 +15,5 @@
   "bugs": {
     "url": "https://github.com/jttyeung/smile-more-donate-more/issues"
   },
-  "homepage": "https://github.com/jttyeung/smile-more-donate-more#readme",
-  "dependencies": {
-    "express": "^4.15.3"
-  }
+  "homepage": "https://github.com/jttyeung/smile-more-donate-more#readme"
 }
