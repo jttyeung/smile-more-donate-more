@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/jttyeung/smile-more-donate-more#readme",
   "dependencies": {
+    "ejs": "^2.5.6",
     "express": "^4.15.3"
   }
 }
