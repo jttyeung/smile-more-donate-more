@@ -1,3 +1,4 @@
 *.zip
 *.psd
 *.mp4
+node_modules
