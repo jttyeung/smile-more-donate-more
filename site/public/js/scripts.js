@@ -2,7 +2,7 @@
 
 function contentSwitcher(page) {
 
-  var pages = document.getElementById('content').children;
+  var pages = document.getElementById('body-section').children;
   var currPage = document.getElementById(page);
 
   for (var p = 0; p < pages.length; p++){

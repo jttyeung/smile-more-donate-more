@@ -6,12 +6,13 @@
   </head>
 
   <body>
+    <div class="header">
+        <% include partials/header %>
+    </div>
+
     <div class="container">
-      <% include partials/header %>
-
-      <div id="content">
-
-        <div id="install">
+      <div id="body-section">
+        <div id="install" class="content">
           <div class="col-xs-12">
             <h3>Install now for:</h3>
           </div>
@@ -28,21 +29,18 @@
             Opera
           </div>
         </div>
-
-        <div id="usage" hidden>
-        hi
+        <div id="usage" class="content" hidden>
+          <% include partials/usage %>
         </div>
-
-        <div id="about" hidden>
-        hello
+        <div id="about" class="content" hidden>
+          <% include partials/about %>
         </div>
-
-        <div id="support" hidden>
-        howdy
+        <div id="support" class="content" hidden>
+          <% include partials/support %>
         </div>
-
       </div>
-
+    </div>
+    <div class="footer">
       <footer>
         <% include partials/footer %>
       </footer>
