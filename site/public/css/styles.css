@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,900');
 
+html {
+  min-height: 100%;
+  position: relative;
+}
+
 body {
   background-color: rgb(255, 255, 255);
+  margin-bottom: 160px;
 }
 
 .header {
@@ -80,7 +86,7 @@ a:hover {
 }
 
 footer {
-  position: relative;
+  position: absolute;
   bottom: 0px;
   width: 100%;
   background: rgba(255, 153, 0, 0.1);
