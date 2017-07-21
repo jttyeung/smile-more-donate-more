@@ -7,10 +7,6 @@ body {
 .header {
   background-color: rgb(255, 153, 0);
 }
-/*
-.container {
-  margin-bottom: 130px;
-}*/
 
 div {
   font-family: 'Open Sans', 'Arial', sans-serif;
@@ -79,6 +75,9 @@ a:hover {
   font-size: 1.4em;
 }
 
+.title {
+  font-size: 1.3em;
+}
 
 footer {
   position: relative;
