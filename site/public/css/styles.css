@@ -7,7 +7,7 @@ html {
 
 body {
   background-color: rgb(255, 255, 255);
-  margin-bottom: 160px;
+  margin-bottom: 170px;
 }
 
 .header {
@@ -83,6 +83,10 @@ a:hover {
 
 .title {
   font-size: 1.3em;
+}
+
+.inline {
+  display: inline;
 }
 
 footer {

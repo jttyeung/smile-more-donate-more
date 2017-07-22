@@ -1,75 +1,71 @@
-<style>
+body {
 
-  body {
+}
 
-  }
+div {
+  width: 300px;
+  font-family: "Roboto", "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
 
-  div {
-    width: 300px;
-    font-family: "Roboto", "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-  }
+div.info {
+  max-width: 300px;
+  min-height: 420px;
+}
 
-  div.info {
-    max-width: 300px;
-    min-height: 420px;
-  }
+div#title {
+  height: 120px;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  padding: 0px 9px 12px 29px;
+  background: rgba(255, 153, 0, 0.8);
+  font-size: 1.5em;
+  font-weight: 900;
+}
 
-  div#title {
-    height: 120px;
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    padding: 0px 9px 12px 29px;
-    background: rgba(255, 153, 0, 0.8);
-    font-size: 1.5em;
-    font-weight: 900;
-  }
+div#content {
+  max-width: 300px;
+  width: 300px;
+  word-wrap: break-word;
+}
 
-  div#content {
-    max-width: 300px;
-    width: 300px;
-    word-wrap: break-word;
-  }
+p {
+  position: fixed;
+  left: 0px;
+  padding: 10px;
+}
 
-  p {
-    position: fixed;
-    left: 0px;
-    padding: 10px;
-  }
+p#impact {
+  height: 60px;
+  width: 300px;
+  left: 0px;
+  top: 130px;
+  padding: 5px;
+  font-size: 1.6em;
+  text-align: center;
+}
 
-  p#impact {
-    height: 60px;
-    width: 300px;
-    left: 0px;
-    top: 130px;
-    padding: 5px;
-    font-size: 1.6em;
-    text-align: center;
-  }
+p#info {
+  font-size: 1.15em;
+  top: 176px;
+}
 
-  p#info {
-    font-size: 1.15em;
-    top: 176px;
-  }
+p#footer {
+  top: 336px;
+  height: 68px;
+  font-size: 1em;
+  background: rgba(255, 153, 0, 0.1);
+}
 
-  p#footer {
-    top: 336px;
-    height: 68px;
-    font-size: 1em;
-    background: rgba(255, 153, 0, 0.1);
-  }
+a {
+  background: rgba(255, 153, 0, 0.3);
+  font-weight: 900;
+  color: rgb(35, 47, 62);
+  text-decoration: none;
+}
 
-  a {
-    background: rgba(255, 153, 0, 0.3);
-    font-weight: 900;
-    color: rgb(35, 47, 62);
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: rgb(255, 255, 255);
-  }
-
-</style>
+a:hover {
+  color: rgb(255, 255, 255);
+}
