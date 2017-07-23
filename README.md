@@ -1,9 +1,9 @@
-![Smile More, Donate More :) Banner](smilemore-1400x560.png)
+![Smile More, Donate More :) Banner](https://github.com/jttyeung/smile-more-donate-more/blob/master/screenshots/smilemore-1400x560.png?raw=true)
 
 Smile More, Donate More :)
 ======
 
-**Smile More, Donate More :)** is a lightweight browser extension built in JavaScript, HTML, and CSS. The extension captures any Amazon.com URL requests browsed to by the user and instead sends the browser to the AmazonSmile (https://smile.amazon.com) mirror page. AmazonSmile is Amazon's charity program for non-profit organizations. For every purchase through AmazonSmile, Amazon donates 0.5% of the price of eligible items to the user's charity organization of choice. Learn more about the [creation of this project here][project].
+**Smile More, Donate More :)** is a lightweight browser extension built in JavaScript, HTML, and CSS. The extension captures any Amazon.com URL requests browsed to by the user and instead sends the browser to the AmazonSmile (https://smile.amazon.com) mirror page. AmazonSmile is Amazon's charity program for non-profit organizations. For every purchase through AmazonSmile, Amazon donates 0.5% of the price of eligible items to the user's charity organization of choice. Learn more [about the extension here][website] or about the [creation of this project here][project].
 
 
 ## Compatibility
@@ -26,7 +26,7 @@ Get the extension for:
 
 Here's a screencast of what it looks like in action on the Chrome browser:
 
-![Smile More, Donate More :) Screencast](smilemore-screencast.gif)
+![Smile More, Donate More :) Screencast](https://github.com/jttyeung/smile-more-donate-more/blob/master/screenshots/smilemore-screencast.gif?raw=true)
 
 
 ## Current Version
@@ -36,7 +36,7 @@ This version contains the following features:
 - A link to the user's AmazonSmile impact homepage
 
 
-## Privacy Guarantee
+## Privacy Respected
 
 This app does not track, store, or send any user or usage information.
 
@@ -55,6 +55,7 @@ This project is licensed under the [MIT License][license].
 [project]: https://jttyeung.github.io/2017/07/02/smile-more-donate-more.html
 [chrome-download]: https://chrome.google.com/webstore/detail/smile-more-donate-more/lbicnnogjkpfkhokabdopjibhlcejhop
 [mozilla-download]: https://addons.mozilla.org/en-US/firefox/addon/smile-more-donate-more/
-[opera-download]: 
+[opera-download]: #
 [linkedin]: https://linkedin.com/in/jttyeung
 [license]: LICENSE
+[website]: https://smilemoredonatemore.com
