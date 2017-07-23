@@ -22,10 +22,11 @@ chrome.webRequest.onBeforeRequest.addListener(
     }
   },
   {
-    // Listens while on all URLs
+    // Listens on all URLs
     urls: ['<all_urls>'],
     types: ["main_frame","sub_frame"]
   },
+  // Blocks initial network request, waits for listener to return
   ['blocking']
 
 );
