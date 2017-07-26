@@ -4,7 +4,7 @@
   "description": "![Smile More, Donate More :) Banner](smilemore-1400x560.png)",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -13,9 +13,9 @@
   "author": "Joanne Yeung",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jttyeung/smile-more-donate-more/issues"
+    "url": "https://smilemoredonatemore.com"
   },
-  "homepage": "https://github.com/jttyeung/smile-more-donate-more#readme",
+  "homepage": "https://smilemoredonatemore.com",
   "dependencies": {
     "ejs": "^2.5.6",
     "express": "^4.15.3"
