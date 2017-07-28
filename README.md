@@ -3,7 +3,7 @@
 Smile More, Donate More :)
 ======
 
-**Smile More, Donate More :)** is a lightweight browser extension built in JavaScript, HTML, and CSS. The extension captures any Amazon.com URL requests browsed to by the user and instead sends the browser to the AmazonSmile (https://smile.amazon.com) mirror page. AmazonSmile is Amazon's charity program for non-profit organizations. For every purchase through AmazonSmile, Amazon donates 0.5% of the price of eligible items to the user's charity organization of choice. Learn more [about the extension here][website] or about the [creation of this project here][project].
+**Smile More, Donate More :)** is a lightweight browser extension built in JavaScript, HTML, and CSS. The extension captures any Amazon.com URL requests browsed to by the user and instead sends the browser to the AmazonSmile (https://smile.amazon.com) mirror page. AmazonSmile is Amazon's charity program for non-profit organizations. For every purchase through AmazonSmile, Amazon donates 0.5% of the price of eligible items to the user's charity organization of choice. Learn more [about the extension on the website][website] or about the [creation of this project here][project].
 
 
 ## Compatibility
@@ -11,7 +11,7 @@ Smile More, Donate More :)
 This app is currently compatible with the following browsers:
 - Chrome
 - Firefox
-- Opera
+- ~~Opera~~ Coming Soon!
 
 
 ## How to Use **Smile More, Donate More :)**
@@ -21,7 +21,7 @@ Simply add the extension to your browser of choice using one of the below free d
 Get the extension for:
 - Chrome on [Chrome's Web Store][chrome-download]
 - Firefox on [Mozilla's Add-Ons Catalog][mozilla-download]
-- Opera on [Opera's Extensions Catalog][opera-download]
+- ~~Opera on [Opera's Extensions Catalog][opera-download]~~ Coming Soon!
 
 
 Here's a screencast of what it looks like in action on the Chrome browser:
