@@ -8,7 +8,7 @@ chrome.webRequest.onBeforeRequest.addListener(
     // Amazon URLs to ignore when redirecting
     var filters = [ '(redirect=true)',
                     '(redirector.html)',
-                    '(ap)' ];
+                    '(/ap/)' ];
 
     // Fixes too many redirects bug when
     // user is not logged to Amazon
