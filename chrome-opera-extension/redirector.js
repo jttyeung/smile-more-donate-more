@@ -17,7 +17,7 @@ chrome.webRequest.onBeforeRequest.addListener(
     }
 
     // Filters for www.amazon.com requests only
-    if(url.includes('www.amazon.com')) {
+    if(url.includes('.amazon.com')) {
       return smileUrlConstructor(url);
     }
   },
@@ -37,7 +37,7 @@ chrome.webRequest.onBeforeRequest.addListener(
 function smileUrlConstructor(url){
 
   var amazonSmile = 'https://smile.amazon.com';
-  var regexAmazon = new RegExp(/(www\.amazon\.com)/);
+  var regexAmazon = new RegExp(/(\.amazon\.com)/);
   var parseAmazonUrl = url.split(regexAmazon);
   var amazonProduct = parseAmazonUrl[parseAmazonUrl.length-1];
 
