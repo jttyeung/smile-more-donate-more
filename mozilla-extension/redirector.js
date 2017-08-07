@@ -20,8 +20,7 @@ browser.webRequest.onBeforeRequest.addListener(
     return smileUrlConstructor(url);
   },
   {
-    // Listens on all URLs
-    urls: ['<all_urls>'],
+    // Checks main and sub-frames (e.g. iframe)
     types: ["main_frame","sub_frame"]
   },
   // Blocks initial network request, waits for listener to return
@@ -46,4 +45,3 @@ function smileUrlConstructor(url){
   }
 
 }
-
