@@ -16,10 +16,8 @@ chrome.webRequest.onBeforeRequest.addListener(
       return;
     }
 
-    // Filters for www.amazon.com requests only
-    if(url.includes('.amazon.com')) {
-      return smileUrlConstructor(url);
-    }
+    // Returns AmazonSmile URL
+    return smileUrlConstructor(url);
   },
   {
     // Listens on all URLs
