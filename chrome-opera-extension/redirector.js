@@ -20,7 +20,11 @@ chrome.webRequest.onBeforeRequest.addListener(
     return smileUrlConstructor(url);
   },
   {
-    // Checks main and sub-frames (e.g. iframe)
+    // Checks main and sub-frames (e.g. iframe) under Amazon domains
+    urls: [ "http://amazon.com/*",
+            "https://amazon.com/*",
+            "http://www.amazon.com/*",
+            "https://www.amazon.com/*" ],
     types: ["main_frame","sub_frame"]
   },
   // Blocks initial network request, waits for listener to return
