@@ -8,7 +8,7 @@ browser.webRequest.onBeforeRequest.addListener(
     // Amazon URLs to ignore when redirecting
     var filters = [ '(redirect=true)',
                     '(redirector.html)',
-                    '(ap)' ];
+                    '(/ap/)' ];
 
     // Fixes too many redirects bug when
     // user is not logged to Amazon
@@ -16,10 +16,8 @@ browser.webRequest.onBeforeRequest.addListener(
       return;
     }
 
-    // Filters for www.amazon.com requests only
-    if(url.includes('www.amazon.com')) {
-      return smileUrlConstructor(url);
-    }
+    // Returns AmazonSmile URL
+    return smileUrlConstructor(url);
   },
   {
     // Listens on all URLs
@@ -37,7 +35,7 @@ browser.webRequest.onBeforeRequest.addListener(
 function smileUrlConstructor(url){
 
   var amazonSmile = 'https://smile.amazon.com';
-  var regexAmazon = new RegExp(/(www\.amazon\.com)/);
+  var regexAmazon = new RegExp(/(\.amazon\.com)/);
   var parseAmazonUrl = url.split(regexAmazon);
   var amazonProduct = parseAmazonUrl[parseAmazonUrl.length-1];
 
@@ -48,3 +46,4 @@ function smileUrlConstructor(url){
   }
 
 }
+

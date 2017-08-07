@@ -7,7 +7,7 @@
 
   "description": "Redirects Amazon.com requests to smile.amazon.com. Amazon donates to your favorite charity every time you shop through AmazonSmile.",
 
-  "version": "1.1",
+  "version": "1.2",
 
   "browser_action": {
     "default_icon": "icons/smilemore32.png",
