@@ -4,7 +4,8 @@
   "description": "![Smile More, Donate More :) Banner](smilemore-1400x560.png)",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "test": "jasmine"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,8 @@
   "dependencies": {
     "ejs": "^2.5.6",
     "express": "^4.15.3"
+  },
+  "devDependencies": {
+    "jasmine": "^2.8.0"
   }
 }

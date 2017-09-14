@@ -38,7 +38,7 @@ browser.webRequest.onBeforeRequest.addListener(
 function smileUrlConstructor(url){
 
   var amazonSmile = 'https://smile.amazon.com';
-  var regexAmazon = new RegExp(/(\.amazon\.com)/);
+  var regexAmazon = new RegExp(/(amazon\.com)/);
   var parseAmazonUrl = url.split(regexAmazon);
   var amazonProduct = parseAmazonUrl[parseAmazonUrl.length-1];
 

@@ -8,7 +8,8 @@ chrome.webRequest.onBeforeRequest.addListener(
     // Amazon URLs to ignore when redirecting
     var filters = [ '(redirect=true)',
                     '(redirector.html)',
-                    '(/ap/)' ];
+                    '(/ap/)',
+                    '(/gp/)' ];
 
     // Fixes too many redirects bug when
     // user is not logged to Amazon
@@ -38,7 +39,7 @@ chrome.webRequest.onBeforeRequest.addListener(
 function smileUrlConstructor(url){
 
   var amazonSmile = 'https://smile.amazon.com';
-  var regexAmazon = new RegExp(/(\.amazon\.com)/);
+  var regexAmazon = new RegExp(/(amazon\.com)/);
   var parseAmazonUrl = url.split(regexAmazon);
   var amazonProduct = parseAmazonUrl[parseAmazonUrl.length-1];
 
