@@ -9,7 +9,6 @@ browser.webRequest.onBeforeRequest.addListener(
     var filters = [ '(redirect=true)',
                     '(redirector.html)',
                     '(/ap/)',
-                    '(/gp/)',
                     '(smdm-noredirect=true)',
                     ];
 
@@ -23,7 +22,7 @@ browser.webRequest.onBeforeRequest.addListener(
     // smdm-noredirect rule is removed from the existing URL before
     // reconstructing AmazonSmile URL. Prevents subsequent pages from
     // being exempt from Smile More, Donate More URL redirects.
-    var existingRedirect = new RegExp(/'smilemorenoredirect%3Dtrue'/)
+    var existingRedirect = new RegExp(/'smdm-noredirect%3Dtrue'/)
 
     if(url.match(existingRedirect)) {
       url = url.split(existingRedirect).join()
