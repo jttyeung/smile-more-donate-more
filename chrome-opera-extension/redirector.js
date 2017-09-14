@@ -9,12 +9,24 @@ chrome.webRequest.onBeforeRequest.addListener(
     var filters = [ '(redirect=true)',
                     '(redirector.html)',
                     '(/ap/)',
-                    '(/gp/)' ];
+                    '(/gp/)',
+                    '(smdm-noredirect=true)',
+                    ];
 
     // Fixes too many redirects bug when
     // user is not logged to Amazon
     if(url.match(filters.join('|'))) {
       return;
+    }
+
+    // If user is redirected, e.g. to the Amazon login page, the
+    // smdm-noredirect rule is removed from the existing URL before
+    // reconstructing AmazonSmile URL. Prevents subsequent pages from
+    // being exempt from Smile More, Donate More URL redirects.
+    var existingRedirect = new RegExp(/'smilemorenoredirect%3Dtrue'/)
+
+    if(url.match(existingRedirect)) {
+      url = url.split(existingRedirect).join()
     }
 
     // Returns AmazonSmile URL
@@ -43,10 +55,13 @@ function smileUrlConstructor(url){
   var parseAmazonUrl = url.split(regexAmazon);
   var amazonProduct = parseAmazonUrl[parseAmazonUrl.length-1];
 
-  if(amazonProduct !== regexAmazon) {
-    return {
-      redirectUrl: amazonSmile + amazonProduct
-    };
+  var regexQueryString = new RegExp(/(\?)/);
+  var smileMoreNoRedirect = 'smdm-noredirect=true';
+
+  if(amazonProduct.match(regexQueryString)){
+    return { redirectUrl: amazonSmile + amazonProduct + '&' + smileMoreNoRedirect };
+  } else {
+    return { redirectUrl: amazonSmile + amazonProduct + '?' + smileMoreNoRedirect };
   }
 
 }
