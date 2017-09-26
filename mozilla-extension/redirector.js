@@ -47,8 +47,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 // Constructs an AmazonSmile URL given an existing Amazon URL
 // Redirects request to AmazonSmile
-function smileUrlConstructor(url){
-
+function smileUrlConstructor(url) {
   var amazonSmile = 'https://smile.amazon.com';
   var regexAmazon = new RegExp(/(amazon\.com)/);
   var parseAmazonUrl = url.split(regexAmazon);
@@ -57,10 +56,20 @@ function smileUrlConstructor(url){
   var regexQueryString = new RegExp(/(\?)/);
   var smileMoreNoRedirect = 'smdm-noredirect=true';
 
+  var decodedUrl = uriDecoder(amazonSmile + amazonProduct);
+
   if(amazonProduct.match(regexQueryString)){
-    return { redirectUrl: amazonSmile + amazonProduct + '&' + smileMoreNoRedirect };
+    return { redirectUrl: decodedUrl + '&' + smileMoreNoRedirect };
   } else {
-    return { redirectUrl: amazonSmile + amazonProduct + '?' + smileMoreNoRedirect };
+    return { redirectUrl: decodedUrl + '?' + smileMoreNoRedirect };
   }
 
+}
+
+
+// Decodes URI if necessary (e.g. encoded as a result of a redirect)
+function uriDecoder(url) {
+  if(url.indexOf('%') != -1) {
+    return decodeURIComponent(url);
+  }
 }
