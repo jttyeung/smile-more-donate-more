@@ -35,13 +35,13 @@ browser.webRequest.onBeforeRequest.addListener(
 
 
 function removesExistingRedirectRule(url){
-    // If user is redirected, e.g. to the Amazon login page, the
-    // smdm-noredirect rule is removed from the existing URL before
-    // reconstructing AmazonSmile URL. Prevents subsequent pages from
-    // being exempt from Smile More, Donate More URL redirects.
-    var existingRedirect = new RegExp(/(?:smdm-noredirect%3Dtrue|smdm-noredirect%253Dtrue)+/);
+  // If user is redirected, e.g. to the Amazon login page, the
+  // smdm-noredirect rule is removed from the existing URL before
+  // reconstructing AmazonSmile URL. Prevents subsequent pages from
+  // being exempt from Smile More, Donate More URL redirects.
+  var existingRedirect = new RegExp(/(?:smdm-noredirect%3Dtrue|smdm-noredirect%253Dtrue)+/);
 
-    return url.split(existingRedirect).join();
+  return url.split(existingRedirect).join();
 }
 
 
@@ -67,9 +67,7 @@ function smileUrlConstructor(url) {
 
 
 function uriDecoder(smileUrl) {
-// Decodes URL strings if referred from non-Amazon site
-  var existingRedirect = new RegExp(/smdm-noredirect%3Dtrue/);
-
+  // Decodes URL strings if referred from non-Amazon site
   if(smileUrl.indexOf('%') != -1) {
     return decodeURIComponent(smileUrl);
   }
