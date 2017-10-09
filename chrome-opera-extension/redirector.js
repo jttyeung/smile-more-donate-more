@@ -6,8 +6,9 @@ chrome.webRequest.onBeforeRequest.addListener(
     var url = details.url;
     var signIn = new RegExp(/ap\/signin\?_encoding/);
     // Amazon URLs to ignore when redirecting
-    var filters = [ '(redirect=true)',
-                    '(redirector.html)',
+    var filters = [
+                    // '(redirect=true)',
+                    // '(redirector.html)',
                     '(smdm-noredirect=true)',
                     ];
 

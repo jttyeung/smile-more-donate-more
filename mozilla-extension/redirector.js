@@ -4,30 +4,18 @@ browser.webRequest.onBeforeRequest.addListener(
 
   function(details) {
     var url = details.url;
-    var signIn = new RegExp(/ap\/signin\?_encoding/);
-    // Amazon URLs to ignore when redirecting
-    var filters = [ '(redirect=true)',
-                    '(redirector.html)',
-                    // '(/ap/)',
-                    '(smdm-noredirect=true)',
-                    ];
 
+    // Amazon URLs to ignore when redirecting
+    var filters = [
+                    '(smdm-noredirect=true)',
+                    '(openid)',
+                    ];
 
     // Fixes too many redirects bug when
     // user is not logged to Amazon
     if(url.match(filters.join('|'))) {
       return;
     }
-
-    // url = removesExistingRedirectRule(url);
-    if(url.match(signIn)) {
-      var existingRedirect = new RegExp(/(?:smdm-noredirect%3Dtrue|smdm-noredirect%253Dtrue)+/);
-      // var existingRedirect = new RegExp(/smdm-noredirect%3Dtrue/);
-      url = url.split(existingRedirect).join();
-      console.log('url    == ' + url)
-      return { url };
-    }
-
 
     // Returns AmazonSmile URL
     return smileUrlConstructor(url);
@@ -46,18 +34,15 @@ browser.webRequest.onBeforeRequest.addListener(
 );
 
 
-// function removesExistingRedirectRule(url){
-//     // If user is redirected, e.g. to the Amazon login page, the
-//     // smdm-noredirect rule is removed from the existing URL before
-//     // reconstructing AmazonSmile URL. Prevents subsequent pages from
-//     // being exempt from Smile More, Donate More URL redirects.
-//     var existingRedirect = new RegExp(/(?:smdm-noredirect%3Dtrue|smdm-noredirect%253Dtrue)+/);
-//     // var existingRedirect = new RegExp(/smdm-noredirect%3Dtrue/);
-//     console.log(existingRedirect)
-//     console.log(url)
+function removesExistingRedirectRule(url){
+    // If user is redirected, e.g. to the Amazon login page, the
+    // smdm-noredirect rule is removed from the existing URL before
+    // reconstructing AmazonSmile URL. Prevents subsequent pages from
+    // being exempt from Smile More, Donate More URL redirects.
+    var existingRedirect = new RegExp(/(?:smdm-noredirect%3Dtrue|smdm-noredirect%253Dtrue)+/);
 
-//     return url.split(existingRedirect).join();
-// }
+    return url.split(existingRedirect).join();
+}
 
 
 function smileUrlConstructor(url) {
@@ -65,16 +50,15 @@ function smileUrlConstructor(url) {
   // Redirects request to AmazonSmile
   var amazonSmile = 'https://smile.amazon.com';
   var regexAmazon = new RegExp(/(amazon\.com)/);
-  var parseAmazonUrl = url.split(regexAmazon);
-
-  var amazonProduct = parseAmazonUrl[parseAmazonUrl.length-1];
-
   var regexQueryString = new RegExp(/(\?)/);
+  var parseAmazonUrl = url.split(regexAmazon);
+  var amazonProduct = parseAmazonUrl[parseAmazonUrl.length-1];
   var smileMoreNoRedirect = 'smdm-noredirect=true';
 
   var decodedUrl = uriDecoder(amazonSmile + amazonProduct);
+  decodedUrl = removesExistingRedirectRule(decodedUrl);
 
-  if(amazonProduct.match(regexQueryString)){
+  if(decodedUrl.match(regexQueryString)){
     return { redirectUrl: decodedUrl + '&' + smileMoreNoRedirect };
   } else {
     return { redirectUrl: decodedUrl + '?' + smileMoreNoRedirect };
