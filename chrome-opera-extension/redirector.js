@@ -25,7 +25,12 @@ chrome.webRequest.onBeforeRequest.addListener(
     urls: [ "http://amazon.com/*",
             "https://amazon.com/*",
             "http://www.amazon.com/*",
-            "https://www.amazon.com/*" ],
+            "https://www.amazon.com/*",
+            "http://amazon.de/*",
+            "https://amazon.de/*",
+            "http://www.amazon.de/*",
+            "https://www.amazon.de/*",
+          ],
     types: ["main_frame","sub_frame"]
   },
   // Blocks initial network request, waits for listener to return
@@ -54,17 +59,36 @@ let uriDecoder = (smileUrl) => {
 };
 
 
+let checkTld = (url) => {
+  let regexAmazon = new RegExp(/(amazon\.com)/);
+  let regexAmazonDe = new RegExp(/(amazon\.de)/);
+  let amazonSmile = 'https://smile.amazon.com';
+  let amazonSmileDe = 'https://smile.amazon.de';
+  let splitUrl;
+
+  if(url.match(regexAmazonDe)) {
+    splitUrl = url.split(regexAmazonDe);
+  } else {
+    splitUrl = url.split(regexAmazon);
+  }
+
+  let amazonProduct = splitUrl[splitUrl.length-1];
+
+  if(url.match(regexAmazonDe)) {
+    return uriDecoder(amazonSmileDe + amazonProduct);
+  } else {
+    return uriDecoder(amazonSmile + amazonProduct);
+  }
+
+}
+
+
 let smileUrlConstructor = (url) => {
   // Constructs an AmazonSmile URL given an existing Amazon URL
   // Redirects request to AmazonSmile
-  let amazonSmile = 'https://smile.amazon.com';
-  let regexAmazon = new RegExp(/(amazon\.com)/);
   let regexQueryString = new RegExp(/(\?)/);
-  let parseAmazonUrl = url.split(regexAmazon);
-  let amazonProduct = parseAmazonUrl[parseAmazonUrl.length-1];
   let smileMoreNoRedirect = 'smdm-noredirect=true';
-
-  let decodedUrl = uriDecoder(amazonSmile + amazonProduct);
+  let decodedUrl = checkTld(url);
   decodedUrl = removesExistingRedirectRule(decodedUrl);
 
   if(decodedUrl.match(regexQueryString)){
