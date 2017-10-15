@@ -42,7 +42,16 @@ let removesExistingRedirectRule = (url) => {
   let existingRedirect = new RegExp(/(?:smdm-noredirect%3Dtrue|smdm-noredirect%253Dtrue)+/);
 
   return url.split(existingRedirect).join();
-}
+};
+
+
+let uriDecoder = (smileUrl) => {
+  // Decodes URL strings if referred from non-Amazon site
+  if(smileUrl.indexOf('%') != -1) {
+    return decodeURIComponent(smileUrl);
+  }
+  return smileUrl;
+};
 
 
 let smileUrlConstructor = (url) => {
@@ -63,13 +72,4 @@ let smileUrlConstructor = (url) => {
   } else {
     return { redirectUrl: decodedUrl + '?' + smileMoreNoRedirect };
   }
-}
-
-
-let uriDecoder = (smileUrl) => {
-  // Decodes URL strings if referred from non-Amazon site
-  if(smileUrl.indexOf('%') != -1) {
-    return decodeURIComponent(smileUrl);
-  }
-  return smileUrl;
-}
+};
