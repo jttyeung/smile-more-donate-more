@@ -30,6 +30,10 @@ browser.webRequest.onBeforeRequest.addListener(
             "https://amazon.de/*",
             "http://www.amazon.de/*",
             "https://www.amazon.de/*",
+            "http://amazon.co.uk/*",
+            "https://amazon.co.uk/*",
+            "http://www.amazon.co.uk/*",
+            "https://www.amazon.co.uk/*",
           ],
     types: ["main_frame","sub_frame"]
   },
@@ -60,26 +64,12 @@ let uriDecoder = (smileUrl) => {
 
 
 let checkTld = (url) => {
-  let regexAmazon = new RegExp(/(amazon\.com)/);
-  let regexAmazonDe = new RegExp(/(amazon\.de)/);
-  let amazonSmile = 'https://smile.amazon.com';
-  let amazonSmileDe = 'https://smile.amazon.de';
-  let splitUrl;
+  let regexAmazon = new RegExp(/amazon(\.[^\/]+)(.*)/);
+  let amazonSmile = 'https://smile.amazon';
 
-  if(url.match(regexAmazonDe)) {
-    splitUrl = url.split(regexAmazonDe);
-  } else {
-    splitUrl = url.split(regexAmazon);
-  }
-
-  let amazonProduct = splitUrl[splitUrl.length-1];
-
-  if(url.match(regexAmazonDe)) {
-    return uriDecoder(amazonSmileDe + amazonProduct);
-  } else {
-    return uriDecoder(amazonSmile + amazonProduct);
-  }
-
+  let splitUrl = url.match(regexAmazon);
+   // first captured group is the domain, second is the optional rest of the URL
+  return uriDecoder(amazonSmile + splitUrl[1] + splitUrl[2]);
 }
 
 
